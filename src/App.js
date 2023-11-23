@@ -41,10 +41,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <Alert Alert={alert} />
       <Navbar title="Text Transformer" mode={mode} toggleMode={togglemode}/>
+      <Alert Alert={alert} />
         <Routes>
-          <Route exact path="/about" element={<About />}></Route>
+          <Route exact path="/about" element={<About mode={mode}/>}></Route>
           <Route exact path="/" element={<TextField mode={mode} showAlert={showAlert}/>}></Route>
         </Routes>
       </BrowserRouter>

@@ -33,7 +33,7 @@ export default function TextField(props) {
     }
 
     return (
-        <div className='container my-3' 
+        <div className='container' style={{marginTop:'70px'}} 
         
         // style={{backgroundColor:props.mode==="dark"?"grey":"white"}}
         >
@@ -41,15 +41,15 @@ export default function TextField(props) {
                 <div className="mb-3">
                     <textarea className="form-control" id="myBox" rows="8" onChange={textAdd} value={text} style={{backgroundColor:props.mode==="dark"?"grey":"white",color:props.mode==="dark"?"white":"black"}}></textarea>
                 </div>
-                <button type="button" className={`btn btn-${props.mode} mx-3`} on onClick={clicked}>UPPERCASE</button>
-                <button type="button" className={`btn btn-${props.mode} mx-3`} on onClick={clicked2}>lowercase</button>
-                <button type="button" className={`btn btn-${props.mode} mx-3`} on onClick={clicked3}>Clear Text</button>
+                <button disabled={text.length===0} type="button" className={`btn btn-${props.mode} mx-1 my-1`} on onClick={clicked}>UPPERCASE</button>
+                <button disabled={text.length===0} type="button"  className={`btn btn-${props.mode} mx-1 my-1`} on onClick={clicked2}>lowercase</button>
+                <button disabled={text.length===0} type="button" className={`btn btn-${props.mode} mx-1 my-1`} on onClick={clicked3}>Clear Text</button>
             </div>
 
             <div className='container my-3' >
 
                 <h4>summery of your text</h4>
-                <p>{(text.split(" ").length)-1} and {text.length} characters</p>
+                <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} and {text.length} characters</p>
 
             </div>
 
