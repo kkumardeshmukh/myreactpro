@@ -9,6 +9,8 @@ export default function About(props) {
     //     color:"black"
     // })
 
+
+    // use of object to style the element (always use inline styling in react)
     let myStyle={
         color:props.mode==='dark'?"white":'black',
         backgroundColor:props.mode==='dark'?"grey":'white'
@@ -22,7 +24,7 @@ export default function About(props) {
         <div style={{marginTop:"70px"}}>
         <div className='container my-3' style={myStyle}>
             <div>
-            <h3>About Us</h3>
+            <h3>About Text Transformer</h3>
             </div>
             <div className="accordion" id="accordionExample" style={myStyle}>
                 <div className="accordion-item">

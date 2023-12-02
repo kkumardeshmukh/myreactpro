@@ -10,6 +10,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
 
+  // states should be always define inside the function 
+
   const [mode, setMode] = useState('light')
   const [alert, setAlert] = useState(null)
 
@@ -18,6 +20,8 @@ function App() {
       msg: message,
       type: type
     })
+
+    //alter will automatically dismiss from screen after 1.5 sec
     setTimeout(() => {
       setAlert(null)
     }, 1500);
