@@ -10,6 +10,8 @@ export default function Alert(props) {
     }
     return (
         <div style={{height:'10px'}}>
+            {/* this work as a logical and operator 
+            means if alert came then show the html part  */}
         {props.Alert && <div>
              <div class={`alert alert-${props.Alert.type} alert-dismissible fade show`} role="alert">
                 <strong>{capitalize(props.Alert.type)}:</strong>{props.Alert.msg}

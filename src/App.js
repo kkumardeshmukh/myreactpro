@@ -40,16 +40,17 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+ <BrowserRouter>
+      {/* routing elements must put in browser router */}
       <Navbar title="Text Transformer" mode={mode} toggleMode={togglemode}/>
       <Alert Alert={alert} />
+      {/* every routing element wrap in routes  */}
+      {/* wring a route like bellow because letest versions of react supports them, switch word removed from library  */}
         <Routes>
           <Route exact path="/about" element={<About mode={mode}/>}></Route>
           <Route exact path="/" element={<TextField mode={mode} showAlert={showAlert}/>}></Route>
         </Routes>
       </BrowserRouter>
-
-
     </>
   );
 }

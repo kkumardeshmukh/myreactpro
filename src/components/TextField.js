@@ -6,6 +6,8 @@ export default function TextField(props) {
 
     let [text, setText] = useState("")
 
+    // in text box adding a text is a event and also gives a target method to user then call to value then it gives current text field value
+    
     const textAdd = (event) => {
         // console.log(event.target.value)
         setText(event.target.value)
@@ -50,6 +52,7 @@ export default function TextField(props) {
 
                 <h4>summery of your text</h4>
                 <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} and {text.length} characters</p>
+                {/* above paragraph is very interesting method to count taxt lenth and spcing in bet them */}
 
             </div>
 
